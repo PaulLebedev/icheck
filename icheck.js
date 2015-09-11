@@ -40,7 +40,7 @@
         object.each(function() {
           var self = $(this);
 
-          if (self.is(handle)) {
+          if (self.is(handle) && !self.is('.iCheckOff')) {
             stack = stack.add(self);
           } else {
             stack = stack.add(self.find(handle));
